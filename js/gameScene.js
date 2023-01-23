@@ -14,7 +14,7 @@ class GameScene extends Phaser.Scene {
     let carVelocityX = Math.floor(Math.random() * 30) + 1; //Gets a random number between 1 and 50
     carVelocityX *= Math.floor(Math.random()) ? 1 : -1; //half of the cars will
     const anCar = this.physics.add.sprite(carLocationX, -100, "car");
-    anCar.body.velocity.y = 300;
+    anCar.body.velocity.y = 1500;
     anCar.body.velocity.x = carVelocityX;
     this.carGroup.add(anCar);
   }
@@ -81,7 +81,7 @@ class GameScene extends Phaser.Scene {
     this.createCar();
 
     //Create square
-    this.square = this.physics.add.sprite(1920 / 2, 2000, "square").setScale(1.5)
+    this.square = this.physics.add.sprite(2000 / 2, 2100, "square").setScale(1.7)
     this.square.body.immovable = true
 
     //Car player collision code
@@ -118,7 +118,7 @@ class GameScene extends Phaser.Scene {
         squareCollide.destroy();
         this.score = this.score + 1;
         this.createCar();
-        this.createCar();
+        //this.createCar();
       }.bind(this)
     );
   }

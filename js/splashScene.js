@@ -23,6 +23,7 @@ class SplashScene extends Phaser.Scene {
     console.log("Splash Scene");
     this.load.image("splashSceneBackground", "./assets/dodgethecars.png");
   }
+  
   //Code to display the splash scene
   create(data) {
     this.splashSceneBackgroundImage = this.add.sprite(
@@ -30,6 +31,7 @@ class SplashScene extends Phaser.Scene {
       0,
       "splashSceneBackground"
     );
+    
     this.splashSceneBackgroundImage.x = 1920 / 2;
     this.splashSceneBackgroundImage.y = 1080 / 2;
   }

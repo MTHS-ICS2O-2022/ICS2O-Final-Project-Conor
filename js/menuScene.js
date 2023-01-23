@@ -24,8 +24,8 @@ class MenuScene extends Phaser.Scene {
   //Displays "Menu Scene" in the console
   preload() {
     console.log("Menu Scene");
-    this.load.image("menuSceneBackground", "./assets/starting.png");
-    this.load.image("startButton", "./assets/start.png");
+    this.load.image("menuSceneBackground", "./assets/starting.png")
+    this.load.image("startButton", "./assets/start.png")
   }
   create(data) {
     //Displays the same background image as title scene
@@ -34,10 +34,13 @@ class MenuScene extends Phaser.Scene {
       0,
       "menuSceneBackground"
     );
+
+     this.player = this.physics.add.sprite(1920 / 2, 1080 - 100, "menuSceneBackground").setScale(3.8);
+    
     this.menuSceneBackgroundImage.x = 1920 / 2;
     this.menuSceneBackgroundImage.y = 1080 / 2;
 
-    this.startButton = this.add.sprite(1920 / 2, 1080 / 2 + 100, "startButton");
+    this.startButton = this.add.sprite(2400 / 2, 1750 / 2 + 100, "startButton");
     this.startButton.setInteractive({ useHandCursor: true });
     this.startButton.on("pointerdown", () => this.clickButton());
   }
