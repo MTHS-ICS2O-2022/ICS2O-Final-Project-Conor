@@ -31,7 +31,7 @@ class TitleScene extends Phaser.Scene {
     console.log("Title Scene");
     this.load.image(
       "titleSceneBackground",
-      "./assets/aliens_screen_image2.jpg"
+      "./assets/swervethecars.png"
     );
   }
 
