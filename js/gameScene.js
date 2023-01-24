@@ -14,7 +14,7 @@ class GameScene extends Phaser.Scene {
     let carVelocityX = Math.floor(Math.random() * 30) + 1; //Gets a random number between 1 and 50
     carVelocityX *= Math.floor(Math.random()) ? 1 : -1; //half of the cars will
     const anCar = this.physics.add.sprite(carLocationX, -100, "car");
-    anCar.body.velocity.y = 1500;
+    anCar.body.velocity.y = 2300;
     anCar.body.velocity.x = carVelocityX;
     this.carGroup.add(anCar);
   }
