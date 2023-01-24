@@ -33,9 +33,7 @@ class MenuScene extends Phaser.Scene {
       0,
       0,
       "menuSceneBackground"
-    );
-
-     this.player = this.physics.add.sprite(1920 / 2, 1080 - 100, "menuSceneBackground").setScale(3.8);
+    ).setScale(4.6);
     
     this.menuSceneBackgroundImage.x = 1920 / 2;
     this.menuSceneBackgroundImage.y = 1080 / 2;
